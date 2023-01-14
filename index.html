@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Harsi Darmawan</title>
+    <link rel="icon" href="cx.png" type="image/gif/png">
+</head>
+
+<body id="Home">
+
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Psoppins%26display=swap" rel="stylesheet">
+    </head>
+
+    <nav>
+        <div class="logo">
+            <h4>Website Me</h4>
+        </div>
+        <ul class="nav-links">
+            <li><a href="file:///C:/Users/LENOVO/Desktop/bio%20ig/index.html">Home</a></li>
+            <li><a href="https://mail.google.com/mail/u/0/?pli=1#inbox">contact</a></li>
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+    </nav>
+    <div class="container">
+        <div class="foto-profile">
+            <img src="x.jpg">
+            <h1>Haris Darmawan</h1>
+            <P class="teknik">TEKNIK INFORMATIKA</P>
+            <p class="info">Welcome to my website, please contact my social media</p>
+        </div>
+        <div class="bagian-link">
+            <ul>
+                <li><a href="https://www.instagram.com/haris.dermawan_/">INSTAGRAM</a></li>
+                <li><a href="https://twitter.com/HariisDarmawan">TWITTER</a></li>
+                <li><a href="https://github.com/harisdermawan03">GITHUB</a></li>
+                <li><a href="https://www.tiktok.com/@f1nd3x?is_from_webapp=1&sender_device=pc">TIKTOK</a></li>
+                <li><a href="https://bit.ly/Harisdermawan2">WEBSITE</a></li>
+        </div>
+    </div>
+    <script>
+        function navSlide() {
+            const burger = document.querySelector(".burger");
+            const nav = document.querySelector(".nav-links");
+            const navLinks = document.querySelectorAll(".nav-links li");
+
+            burger.addEventListener("click", () => {
+                //Toggle Nav
+                nav.classList.toggle("nav-active");
+
+                //Animate Links
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = ""
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+                    }
+                });
+                //Burger Animation
+                burger.classList.toggle("toggle");
+            });
+
+        }
+
+        navSlide();
+    </script>
+</body>
+
+</html>
